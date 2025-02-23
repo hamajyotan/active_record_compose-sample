@@ -1,0 +1,19 @@
+<%= form_with model: user_registration_request do |f| %>
+	<% if f.object.errors.any? %>
+		<h2><%= pluralize(f.object.errors.count, "error") %> prohibited this user from being saved:</h2>
+    <ul>
+      <% f.object.errors.each do |error| %>
+        <li><%= error.full_message %></li>
+      <% end %>
+    </ul>
+	<% end %>
+
+	<div>
+		<%= f.label :email %>
+		<%= f.email_field :email %>
+	</div>
+
+	<div>
+		<%= f.submit %>
+	</div>
+<% end %>

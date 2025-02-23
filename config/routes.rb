@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  resources :user_registration_requests, only: %i[new create]
+  resources :user_registrations, only: %i[] do
+    scope module: :user_registrations do
+      resource :confirmation, only: %i[new create]
+    end
+  end
+
+  resource :dashboard, only: %i[show]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
@@ -10,5 +18,9 @@ Rails.application.routes.draw do
   # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
 
   # Defines the root path route ("/")
-  # root "posts#index"
+  root "root#index"
+
+  if Rails.configuration.action_mailer.delivery_method == :letter_opener_web
+    mount LetterOpenerWeb::Engine, at: "/letter_opener"
+  end
 end
