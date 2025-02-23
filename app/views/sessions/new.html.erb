@@ -1,0 +1,21 @@
+<% content_for :title, t(".title") %>
+
+<%= form_with model: @session, url: session_path do |f| %>
+  <%= render 'model_error', object: f.object %>
+
+  <div class="mb-3">
+    <%= f.label :email, class: %[form-label] %>
+    <%= f.email_field :email, class: %[form-control] %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :password, class: %[form-label] %>
+    <%= f.password_field :password, class: %[form-control] %>
+  </div>
+
+  <%= f.submit class: %[btn btn-primary] %>
+<% end %>
+
+<br>
+
+<%= link_to t("back"), root_path %>

@@ -16,7 +16,7 @@ gem "turbo-rails"
 gem "stimulus-rails"
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
-# gem "bcrypt", "~> 3.1.7"
+gem "bcrypt", "~> 3.1.7"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ windows jruby ]
@@ -44,6 +44,7 @@ group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
 
+  gem "letter_opener_web"
   gem "rbs", require: false
   gem "rbs_rails", require: false
   gem "repl_type_completor", require: false
@@ -56,3 +57,5 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem "active_record_compose"

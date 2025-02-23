@@ -1,0 +1,9 @@
+<%= form_with model: post, url: dashboard_post_path do |f| %>
+  <%= render 'model_error', object: f.object %>
+
+  <div class="mb-3">
+    <%= f.text_field :content, class: %[form-control] %>
+	</div>
+
+  <%= f.submit class: %[btn btn-primary] %>
+<% end %>
