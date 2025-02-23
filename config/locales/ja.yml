@@ -27,21 +27,21 @@
 #       "yes": yup
 #       enabled: "ON"
 
-en:
-  hello: "Hello world"
-  back: "Back"
+ja:
+  hello: "こんにちは世界"
+  back: "戻る"
 
   application:
     sidebar:
-      profile: "Profile"
-      sign_out: "Sign-out"
+      profile: "プロフィール"
+      sign_out: "ログアウト"
   dashboard:
     profiles:
       show:
-        title: "Profile"
+        title: "プロフィール"
   sessions:
     new:
-      title: "Login"
+      title: "ログイン"
   user_registration_requests:
     new:
-      title: "Sign-up"
+      title: "ユーザ登録"
