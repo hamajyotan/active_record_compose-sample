@@ -3,6 +3,7 @@ class Session < ApplicationModel
   attribute :password, :string
 
   validates :email, :password, presence: true
+  validate :require_authenticated
 
   before_validation :normalize
   before_validation :authenticate
@@ -16,14 +17,15 @@ class Session < ApplicationModel
   end
 
   def authenticate
-    set_authenticated_user
-    errors.add(:base, :login_failed) if authorized_user.blank?
+    @authorized_user =
+      if email.present? && password.present? && (credential = UserCredential.find_by(email:)&.authenticate(password))
+        credential.user
+      end
   end
 
-  def set_authenticated_user
-    @authorized_user =
-      if (authorized_user = UserCredential.find_by(email:)&.authenticate(password))
-        authorized_user.user
-      end
+  def require_authenticated
+    return if authenticated_user.present?
+
+    errors.add(:base, :login_failed)
   end
 end
