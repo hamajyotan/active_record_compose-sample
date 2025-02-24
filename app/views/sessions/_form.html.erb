@@ -1,12 +1,5 @@
 <%= form_with model: session, url: session_path do |f| %>
-	<% if f.object.errors.any? %>
-		<h2><%= pluralize(f.object.errors.count, "error") %> prohibited this user from being saved:</h2>
-    <ul>
-      <% f.object.errors.each do |error| %>
-        <li><%= error.full_message %></li>
-      <% end %>
-    </ul>
-	<% end %>
+	<%= render 'model_error', object: f.object %>
 
 	<div>
 		<%= f.label :email %>

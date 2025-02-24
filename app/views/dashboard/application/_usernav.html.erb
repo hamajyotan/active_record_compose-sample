@@ -1,0 +1,10 @@
+<div>
+  <p>
+    ようこそ
+    <%= current_user.name %>
+    さん
+  </p>
+  <p>
+    <%= link_to 'signed out', session_path, data: { turbo_method: :delete } %>
+  </p>
+</div>

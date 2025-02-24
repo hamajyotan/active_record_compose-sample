@@ -17,7 +17,7 @@ class Session < ApplicationModel
 
   def authenticate
     set_authenticated_user
-    errors.add(:base, :invalid) if authorized_user.blank?
+    errors.add(:base, :login_failed) if authorized_user.blank?
   end
 
   def set_authenticated_user

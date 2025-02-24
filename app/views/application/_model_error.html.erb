@@ -1,0 +1,9 @@
+<% if object.errors.any? %>
+  <h2><%= t('errors.template.header', count: object.errors.size, model: object.class) %></h2>
+  <h4><%= t('errors.template.body', count: object.errors.size) %></h4>
+  <ul>
+    <% object.errors.each do |error| %>
+      <li><%= error.full_message %></li>
+    <% end %>
+  </ul>
+<% end %>

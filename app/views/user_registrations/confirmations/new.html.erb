@@ -1,31 +1,3 @@
 <h1>It's works!</h1>
 
-<%= form_with model: @confirmation, url: user_registration_confirmation_path(@user_registration), scope: :confirmation do |f| %>
-	<% if f.object.errors.any? %>
-		<h2><%= pluralize(f.object.errors.count, "error") %> prohibited this user from being saved:</h2>
-    <ul>
-      <% f.object.errors.each do |error| %>
-        <li><%= error.full_message %></li>
-      <% end %>
-    </ul>
-	<% end %>
-
-	<div>
-		<%= f.label :password %>
-		<%= f.password_field :password %>
-	</div>
-
-	<div>
-		<%= f.label :password_confirmation %>
-		<%= f.password_field :password_confirmation %>
-	</div>
-
-	<div>
-		<%= f.label :name %>
-		<%= f.text_field :name %>
-	</div>
-
-	<div>
-		<%= f.submit %>
-	</div>
-<% end %>
+<%= render 'form', confirmation: @confirmation, user_registration: @user_registration %>
