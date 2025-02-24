@@ -1,14 +1,15 @@
 class UserRegistration < ApplicationRecord
-  belongs_to :user, optional: true
-
   attribute :expires_at, default: -> { 3.hours.after }
+  normalizes :email, with: ->(email) { email.strip.downcase }
 
   validates :email, :token, :expires_at, presence: true
   validates :token, uniqueness: true
 
-  scope :active, -> { where(expires_at: Time.current..) }
-
   before_validation :set_token
+
+  belongs_to :user, optional: true
+
+  scope :active, -> { where(expires_at: Time.current..) }
 
   private
 

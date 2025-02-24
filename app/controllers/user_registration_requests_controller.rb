@@ -1,5 +1,4 @@
 class UserRegistrationRequestsController < ApplicationController
-  skip_before_action :require_login
   before_action :set_new_user_registration_request, only: %i[new create]
 
   def new; end
