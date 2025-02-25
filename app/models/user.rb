@@ -3,4 +3,6 @@ class User < ApplicationRecord
   has_one :user_profile
 
   delegate :name, to: :user_profile, allow_nil: true
+
+  scope :active, -> { where.associated(:user_credential) }
 end

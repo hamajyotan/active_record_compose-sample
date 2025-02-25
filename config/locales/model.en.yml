@@ -18,6 +18,7 @@ en:
           has_many: Cannot delete record because dependent %{record} exist
   attributes:
     email: Email
+    name: Name
     password: Password
   errors:
     format: "%{attribute} %{message}"

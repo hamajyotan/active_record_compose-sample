@@ -1,0 +1,12 @@
+<%= form_with model: dashboard_setting, url: dashboard_setting_path do |f| %>
+	<%= render 'model_error', object: f.object %>
+
+	<div>
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+	</div>
+
+	<div>
+		<%= f.submit %>
+	</div>
+<% end %>

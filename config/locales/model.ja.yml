@@ -18,6 +18,7 @@ ja:
           has_many: "%{record}が存在しているので削除できません"
   attributes:
     email: メールアドレス
+    name: 名前
     password: パスワード
   errors:
     format: "%{message}"

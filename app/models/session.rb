@@ -24,7 +24,7 @@ class Session < ApplicationModel
   end
 
   def require_authenticated
-    return if authenticated_user.present?
+    return if authorized_user.present?
 
     errors.add(:base, :login_failed)
   end

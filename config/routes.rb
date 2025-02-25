@@ -9,8 +9,11 @@ Rails.application.routes.draw do
   resource :session, only: %i[new create destroy]
 
   namespace :dashboard do
+    resource :setting, only: %i[show update]
     root "root#index"
   end
+
+  resource :locale, only: %i[show]
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
