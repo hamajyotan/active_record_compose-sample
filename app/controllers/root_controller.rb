@@ -1,4 +1,4 @@
 class RootController < ApplicationController
-  def show
+  def index
   end
 end
