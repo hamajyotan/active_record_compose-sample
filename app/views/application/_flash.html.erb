@@ -4,5 +4,9 @@
   <%= link_to "日本語", locale_path(lang: 'ja') %>
 </p>
 
-<%= notice %>
-<%= alert %>
+<% if alert.present? %>
+  <div class="alert alert-warning" role="alert"><%= alert %></div>
+<% end %>
+<% if notice.present? %>
+  <div class="alert alert-info" role="alert"><%= notice %></div>
+<% end %>

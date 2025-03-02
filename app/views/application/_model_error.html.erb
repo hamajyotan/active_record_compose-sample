@@ -1,7 +1,5 @@
 <% if object.errors.any? %>
-  <h2><%= t('errors.template.header', count: object.errors.size, model: object.class) %></h2>
-  <h4><%= t('errors.template.body', count: object.errors.size) %></h4>
-  <ul>
+  <ul class="alert alert-danger" role="alert">
     <% object.errors.each do |error| %>
       <li><%= error.full_message %></li>
     <% end %>

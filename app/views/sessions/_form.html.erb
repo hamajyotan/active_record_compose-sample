@@ -1,17 +1,15 @@
 <%= form_with model: session, url: session_path do |f| %>
-	<%= render 'model_error', object: f.object %>
+  <%= render 'model_error', object: f.object %>
 
-	<div>
-		<%= f.label :email %>
-		<%= f.email_field :email %>
-	</div>
+  <div class="mb-3">
+    <%= f.label :email, class: %[form-label] %>
+    <%= f.email_field :email, class: %[form-control] %>
+  </div>
 
-	<div>
-		<%= f.label :password %>
-		<%= f.password_field :password %>
-	</div>
+  <div class="mb-3">
+    <%= f.label :password, class: %[form-label] %>
+    <%= f.password_field :password, class: %[form-control] %>
+  </div>
 
-	<div>
-		<%= f.submit %>
-	</div>
+  <%= f.submit class: %[btn btn-primary] %>
 <% end %>

@@ -10,7 +10,7 @@ module Loginable
   def require_login
     return if logged_in?
 
-    redirect_to new_session_path, notice: "ろぐいんしてくれ"
+    redirect_to new_session_path, alert: "ろぐいんしてくれ"
   end
 
   def logged_in? = current_user.present?
