@@ -56,3 +56,5 @@ end
 gem "active_record_compose"
 
 gem "dartsass-rails", "~> 0.5.1"
+
+gem "bootstrap", "~> 5.3"
