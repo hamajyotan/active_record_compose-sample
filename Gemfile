@@ -54,3 +54,5 @@ group :test do
 end
 
 gem "active_record_compose"
+
+gem "dartsass-rails", "~> 0.5.1"
