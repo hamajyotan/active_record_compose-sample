@@ -4,3 +4,5 @@ en:
   application:
     sidebar:
       home: "Home"
+      lang_en: "English"
+      lang_ja: "日本語"
