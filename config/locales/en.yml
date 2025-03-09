@@ -1,2 +1,6 @@
 en:
   application_name: "ActiveRecordCompose Sample"
+
+  application:
+    sidebar:
+      home: "Home"

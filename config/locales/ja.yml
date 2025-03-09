@@ -1,2 +1,6 @@
 ja:
   application_name: "ActiveRecordCompose Sample"
+
+  application:
+    sidebar:
+      home: "ホーム"
