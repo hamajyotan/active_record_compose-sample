@@ -1,8 +1,51 @@
 ja:
   application_name: "ActiveRecordCompose Sample"
+  back: "戻る"
+  please_log_in_first: "先にログインしてください"
 
   application:
+    loading:
+      loading: "Loading..."
     sidebar:
       home: "ホーム"
+      password: "パスワード変更"
+      profile: "プロフィール"
+      sign_out: "ログアウト"
+      sign_up: "ユーザ登録"
+      login: "ログイン"
       lang_en: "Engligh"
       lang_ja: "日本語"
+  dashboard:
+    passwords:
+      show:
+        title: "パスワード変更"
+      update:
+        updated: "パスワードを変更しました"
+    posts:
+      form:
+        what_is_happening: "いまどうしてる？"
+    profiles:
+      show:
+        title: "プロフィール"
+      update:
+        updated: "プロフィールを変更しました"
+  posts:
+    load_more:
+      load_more: "さらに読み込む"
+  sessions:
+    new:
+      title: "ログイン"
+    create:
+      created: "ログインしました"
+    destroy:
+      destroyed: "ログアウトしました"
+  user_registration_mailer:
+    requested:
+      subject: "ユーザ登録はまだ完了していません。"
+      description_1: "ユーザ登録を続けるために、以下のリンクを確認してください。"
+      description_2: "また、このメールが身に覚えのないものである場合はそのまま無視してください。"
+  user_registration_requests:
+    new:
+      title: "ユーザ登録"
+    create:
+      created: "メールを送信しましたので、ご確認ください。"

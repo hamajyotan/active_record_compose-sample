@@ -1,8 +1,51 @@
 en:
   application_name: "ActiveRecordCompose Sample"
+  back: "Back"
+  please_log_in_first: "Please log in first"
 
   application:
+    loading:
+      loading: "Loading..."
     sidebar:
       home: "Home"
+      password: "Change password"
+      profile: "Profile"
+      sign_out: "Sign-out"
+      sign_up: "Sign-up"
+      login: "Login"
       lang_en: "English"
       lang_ja: "日本語"
+  dashboard:
+    passwords:
+      show:
+        title: "Change password"
+      update:
+        updated: "Password changed"
+    posts:
+      form:
+        what_is_happening: "What is happening?!"
+    profiles:
+      show:
+        title: "Profile"
+      update:
+        updated: "Profile changed"
+  posts:
+    load_more:
+      load_more: "Load more"
+  sessions:
+    new:
+      title: "Login"
+    create:
+      created: "Logged in"
+    destroy:
+      destroyed: "Logged out"
+  user_registration_mailer:
+    requested:
+      subject: "User registration has not yet been completed."
+      description_1: "To continue user registration, please review the following links"
+      description_2: "If you do not recognize this email, please ignore it."
+  user_registration_requests:
+    new:
+      title: "Sign-up"
+    create:
+      created: "We have sent you an email, please check it."
